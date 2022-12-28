@@ -14,7 +14,7 @@ function Login() {
     const context = useContext(profilecontext)
     const { getloggedin } = context;
      // const host = "http://localhost:5000";
-     const host = "https://health-profile-mern.onrender.com/";
+     const host = "https://health-profile-mern.onrender.com";
 
     const handlesubmit = async (e) => {
         e.preventDefault();
