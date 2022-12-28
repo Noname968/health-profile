@@ -13,11 +13,13 @@ function Login() {
     const history = useNavigate();
     const context = useContext(profilecontext)
     const { getloggedin } = context;
+     // const host = "http://localhost:5000";
+     const host = "https://health-profile.netlify.app";
 
     const handlesubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:5000/api/auth/login",
+            const response = await axios.post(`${host}/api/auth/login`,
                 {
                     "email": email,
                     "password": password,

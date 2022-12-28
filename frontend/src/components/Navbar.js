@@ -10,14 +10,16 @@ function Navbar() {
     const history = useNavigate();
     const context = useContext(profilecontext)
     const { getloggedin, loggedIn } = context;
+    // const host = "http://localhost:5000";
+    const host = "https://health-profile.netlify.app";
 
     const handlelogout = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.get("http://localhost:5000/api/auth/logout", { withCredentials: true });
+            const response = await axios.get(`${host}/api/auth/logout`, { withCredentials: true });
             const data = await response.data;
             toast.success("Logout Successfull, Redirecting...", { autoClose: 1000, theme: "colored" });
-            setTimeout(async() => {
+            setTimeout(async () => {
                 await getloggedin();
                 history("/login");
             }, 1300);

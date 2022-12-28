@@ -7,7 +7,7 @@ const cookieparser = require('cookie-parser');
 const app = express();
 const port = process.env.PORT || 5000;
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: ['http://localhost:3000', 'https://health-profile.netlify.app'],
     credentials: true,
 }));
 app.use(express.json());

@@ -3,14 +3,15 @@ import React, { useEffect, useState } from 'react';
 import Profilecontext from './Profilecontext';
 
 const Profilestate = (props) => {
-  const host = "http://localhost:5000"
   const profileinitial = []
   const [profile, setprofile] = useState(profileinitial);
   const [loggedIn, setLoggedIn] = useState(undefined);
+  // const host = "http://localhost:5000"
+  const host = "https://health-profile.netlify.app";
 
   // logged in status
   const getloggedin = async () => {
-    const response = await axios.get(`${host}/api/auth/loggedIn`,{withCredentials: true});
+    const response = await axios.get(`${host}/api/auth/loggedIn`, { withCredentials: true });
     setLoggedIn(response.data);
   }
   useEffect(() => {

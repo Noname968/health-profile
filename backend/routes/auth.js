@@ -46,7 +46,9 @@ router.post("/", async (req, res) => {
         // save the token to http-only cookie
         res.cookie("token", token, {
             httpOnly: true,
-            sameSite: "lax",
+            sameSite: "none",
+            secure: true,
+            // remove secure and samesite to lax
         }).send();
         success = true;
     } catch (err) {
@@ -84,7 +86,9 @@ router.post("/login", async (req, res) => {
         // send the token in a HTTP-only cookie
         res.cookie("token", token, {
             httpOnly: true,
-            sameSite: "lax",
+            sameSite: "none",
+            secure: true,
+            // remove secure and samesite to lax
         }).send();
         console.log(token);
 
