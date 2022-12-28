@@ -1,0 +1,55 @@
+.profileco {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #eee;
+  max-height: max-content;
+  padding: 0px 0 10px 12px;
+}
+.con {
+  margin: 15px 15px 15px 10px;
+  display: grid;
+  grid-template-columns: repeat(1, 350px);
+  border-radius: 20px;
+  min-height: 50vh;
+  max-height: max-content;
+  background-color: white;
+}
+.pp {
+  background-color: #eee;
+  margin: 0;
+  padding: 15px 0 0 20px;
+}
+.conitem {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0 0 30px;
+  position: relative;
+}
+.name {
+  font-size: 18px;
+  text-transform: capitalize;
+}
+.addr {
+  font-size: 17px;
+  text-transform: capitalize;
+}
+.address {
+  width: 90%;
+}
+.ad {
+  margin: 0;
+}
+.icons {
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+  font-size: 20px
+}
+i{
+    cursor: pointer;
+}
+.sq{
+    margin-right: 15px;
+}
