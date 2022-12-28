@@ -7,7 +7,7 @@ const Profilestate = (props) => {
   const [profile, setprofile] = useState(profileinitial);
   const [loggedIn, setLoggedIn] = useState(undefined);
   // const host = "http://localhost:5000"
-  const host = "https://health-profile.netlify.app";
+  const host = "https://health-profile-mern.onrender.com/";
 
   // logged in status
   const getloggedin = async () => {

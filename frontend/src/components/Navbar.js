@@ -11,7 +11,7 @@ function Navbar() {
     const context = useContext(profilecontext)
     const { getloggedin, loggedIn } = context;
     // const host = "http://localhost:5000";
-    const host = "https://health-profile.netlify.app";
+    const host = "https://health-profile-mern.onrender.com/";
 
     const handlelogout = async (e) => {
         e.preventDefault();
