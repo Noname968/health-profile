@@ -17,6 +17,7 @@ function Navbar() {
         e.preventDefault();
         try {
             const response = await axios.get(`${host}/api/auth/logout`, { withCredentials: true });
+            // eslint-disable-next-line
             const data = await response.data;
             toast.success("Logout Successfull, Redirecting...", { autoClose: 1000, theme: "colored" });
             setTimeout(async () => {
@@ -47,7 +48,7 @@ function Navbar() {
                                 </li>
                             </>)}
                         </ul>
-                        <button class="btn btn-outline-success" type="submit" onClick={handlelogout}>Logout</button>
+                        <button className="btn btn-outline-success" type="submit" onClick={handlelogout}>Logout</button>
                     </div>
                 </div>
             </nav>
