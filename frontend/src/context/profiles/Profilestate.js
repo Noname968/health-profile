@@ -16,7 +16,7 @@ const Profilestate = (props) => {
   }
   useEffect(() => {
     getloggedin();
-  }, [])
+  }, [loggedIn])
 
   // get all profiles 
   const getprofiles = async () => {

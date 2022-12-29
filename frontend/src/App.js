@@ -15,10 +15,10 @@ function App() {
       {/* <Profilestate> */}
       <BrowserRouter>
         <Routes>
-          {/* {loggedIn === false && (<> */}
+          {loggedIn === false && (<>
             <Route path="/" element={<Register />} />
             <Route path="/login" element={<Login />} />
-          {/* </>)} */}
+          </>)}
           {loggedIn === true && (<>
           <Route path="/profile" element={<Profiles />} />
           <Route path="/addprofile" element={<Addprofile />} />

@@ -27,7 +27,7 @@ function Login() {
             const data = await response.data;
             toast.success("Login Successfull", { autoClose: 1000, theme: "colored" });
             setTimeout(async() => {
-                await getloggedin();   
+                await getloggedin();
                 history("/profile");
             }, 1500);
         } catch (error) {

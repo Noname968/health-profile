@@ -23,7 +23,7 @@ function Navbar() {
             setTimeout(async () => {
                 await getloggedin();
                 history("/login");
-            }, 1300);
+            }, 1400);
         } catch (error) {
             toast.error(error.response.data.errorMessage, { theme: "colored", });
         }
